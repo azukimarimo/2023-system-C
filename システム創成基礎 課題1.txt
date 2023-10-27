@@ -1,0 +1,32 @@
+# include<stdio.h>
+
+int main(void)
+{
+	printf("”š‚ğ“ü—Í‚µ‚ÄEnterƒ{ƒ^ƒ“‚ğ‰Ÿ‚µ‚Ä‚­‚¾‚³‚¢\n");
+
+	double d;
+	scanf_s("%lf", &d);
+
+	printf("“ü—Í‚³‚ê‚½”’l‚Í:%lf\n", d * d);
+
+	return 0;
+}
+
+
+
+# include <stdio.h>
+
+int main(void)
+{
+	int a;
+
+	print("®”‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢ = ");
+	scanf("%d", &a);
+
+	if ((a & 1) == 1)
+		printf("%d ‚ÍŠï”‚Å‚·\n", a);
+	else
+		printf("%d ‚Í‹ô”‚Å‚·\n", a);
+
+	return 0;
+}
