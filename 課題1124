@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    char a[30];
+
+    printf("Please Enter a Password \n");
+    scanf("%29s", a);
+
+    int upperCaseCount1 = 0;
+    int upperCaseCount2 = 0;
+    int upperCaseCount3 = 0;
+    int upperCaseCount4 = 0;
+    int length = strlen(a);
+    
+    if(length>=8 && length<=16){
+        upperCaseCount4++;
+    }
+    
+    for (int i = 0; i < length; i++){
+        if (a[i] >= 'A' && a[i] <= 'Z'){
+            upperCaseCount1++;
+        }
+        
+        else if(a[i] >= 'a' && a[i] <= 'z'){
+            upperCaseCount2++;
+        }
+        
+        else{
+            upperCaseCount3++;
+        }
+      }
+    
+    if (upperCaseCount1>0 && upperCaseCount2>0 && upperCaseCount3>0 && upperCaseCount4>0){
+        printf("条件を満たしたパスワードです。");
+    }
+    
+    if(upperCaseCount1==0){
+        printf("アルファベットの大文字が含まれていません。");
+        
+    }
+    
+    if(upperCaseCount2==0){
+        printf("アルファベットの小文字が含まれていません。");
+    }
+    
+    if(upperCaseCount3==0){
+        printf("その他の文字が含まれていません。");
+    }
+    
+    if(upperCaseCount4==0){
+        printf("８文字以上１６文字以下のパスワードを作ってください。");
+    }
+    
+    return 0;
+    
+}
